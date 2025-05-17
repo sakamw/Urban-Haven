@@ -134,7 +134,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../images/hero-bg.jpg);
   background-size: cover;
   background-position: center;
@@ -239,3 +240,4 @@ nav ul li a:hover {
     justify-content: center;
   }
 }
+/* End of About Section */
