@@ -27,12 +27,14 @@ body {
   color: var(--dark-text);
 }
 
+/*Reusable Styles*/
 .container {
   width: 100%;
   max-width: 75em;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
+/*End of Reusable Styles*/
 
 /* Header */
 header {
@@ -176,3 +178,64 @@ nav ul li a:hover {
 /* End of Hero Section */
 
 /* About Section */
+.about {
+  padding: 8rem 0;
+  background-color: var(--light-bg);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-img {
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 1s cubic-bezier(0.1, 0.56, 0.85, 0.47);
+}
+
+.about-img img:hover {
+  transform: translateY(-0.6rem) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 56.25em) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-text,
+  .about-img {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
