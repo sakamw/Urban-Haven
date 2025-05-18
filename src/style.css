@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "SegoeUI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -16,7 +15,8 @@
   --light-grey-bg: #e0e0e0;
   --dark-text: #333;
   --light-text: #f8f9fa;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  --form-bg: #ecf0f1;
 }
 
 ::selection {
@@ -27,6 +27,7 @@
 body {
   line-height: 1.6;
   color: var(--dark-text);
+  font-family: var(--primary-font);
 }
 
 /*Reusable Styles*/
@@ -72,7 +73,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 nav ul li a {
@@ -93,6 +94,11 @@ nav ul li a:hover {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.header-cta-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
 }
 
 .mob-toggle {
@@ -136,7 +142,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../images/hero-bg.jpg);
   background-size: cover;
   background-position: center;
@@ -215,7 +222,7 @@ nav ul li a:hover {
 
 .about-img img:hover {
   transform: translateY(-0.6rem) scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -245,7 +252,6 @@ nav ul li a:hover {
 
 /* Services Section and Amenities Section*/
 .apartments span {
-  /* font-size: 1rem; */
   color: red;
 }
 
@@ -348,3 +354,139 @@ p strong {
   }
 }
 /*End of Apartment Section and End of Amenities Section */
+
+/*Form Section*/
+.contact {
+  padding: 8rem 0;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 37.5em;
+  margin: 2rem auto;
+}
+
+input,
+textarea {
+  padding: 1.2rem 1.5rem;
+  border: 0.1rem solid var(--light-grey-bg);
+  border-radius: 0.4rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+textarea {
+  min-height: 9.375em;
+  resize: vertical;
+}
+
+button {
+  padding: 1.2rem 2.5rem;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+/* End of Form Section */
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 3rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-logo span {
+  color: var(--secondary-color);
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-icons h2 {
+  color: var(--light-text);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: var(--light-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  width: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  color: var(--light-text);
+}
+
+@media screen and (max-width: 48em) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+}
+/* End of Footer Styles */
