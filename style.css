@@ -137,6 +137,7 @@ nav ul li a:hover {
 
   .mob-toggle {
     display: block;
+    justify-content: space-between;
   }
 }
 /* End of Navigation Styles */
